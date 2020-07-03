@@ -73,16 +73,20 @@ int		ft_padding(t_prtform *form)
 char	*ft_negint(t_prtform *form, int i, char *s)
 {
 	char	*temp;
-	size_t		c;
-	size_t		p;
+	size_t	c;
+	size_t	p;
 
-	c = 0;
+	c = ft_strlen(s) + 1;
 	p = form->padding;
-	while (i < 0 && form->pad_char == '0' && ((c + ft_strlen(s) + 1) < p))
+	if (c < p && i < 0 && form->pad_char == '0' && form->padding > 0)
 	{
-		temp = ft_strjoin("0", s);
-		free(s);
-		s = temp;
+		while (c < p)
+		{
+			temp = ft_strjoin("0", s);
+			free(s);
+			s = temp;
+			c++;
+		}
 	}
 	if (i < 0 && (form->pad_char == ' ' || (form->has_precision && form->precision < form->padding)))
 	{
@@ -90,6 +94,5 @@ char	*ft_negint(t_prtform *form, int i, char *s)
 		free(s);
 		s = temp;
 	}
-	
 	return (s);
 }
