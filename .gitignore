@@ -1,0 +1,10 @@
+pft_2019/
+pft_2019/
+a.out
+local_teste.c.bak
+main.c.bak
+.vscode/launch.json
+hellotest/README.md
+hellotest/runtest.sh
+hellotest/srcs/Makefile
+hellotest/srcs/main_tester.c
