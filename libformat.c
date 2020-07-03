@@ -72,11 +72,13 @@ int		ft_padding(t_prtform *form)
 
 char	*ft_negint(t_prtform *form, int i, char *s)
 {
-	char				*temp;
-	unsigned long int	c;
+	char	*temp;
+	size_t		c;
+	size_t		p;
 
 	c = 0;
-	while (i < 0 && form->pad_char == '0' && (c + ft_strlen(s) + 1) < form->padding)
+	p = form->padding;
+	while (i < 0 && form->pad_char == '0' && ((c + ft_strlen(s) + 1) < p))
 	{
 		temp = ft_strjoin("0", s);
 		free(s);
