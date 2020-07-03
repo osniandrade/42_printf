@@ -76,7 +76,7 @@ char	*ft_negint(t_prtform *form, int i, char *s)
 	int		c;
 
 	c = 0;
-	while (i < 0 && form->pad_char == '0' && (c + ft_strlen(s) + 1) < form->padding)
+	while (i < 0 && form->pad_char == '0' && (c + ft_strlen(s) + 1) < (int)form->padding)
 	{
 		temp = ft_strjoin("0", s);
 		free(s);
