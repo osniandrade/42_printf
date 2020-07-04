@@ -78,7 +78,7 @@ char	*ft_negint(t_prtform *form, int i, char *s)
 
 	c = ft_strlen(s) + 1;
 	p = form->padding;
-	if (c < p && i < 0 && form->pad_char == '0' && form->padding > 0)
+	if (c < p && i < 0 && form->pad_char == '0' && form->padding > 0 && form->has_precision)
 	{
 		while (c < p)
 		{
