@@ -14,12 +14,12 @@
 
 void    ft_printpad(t_prtform *form, char *s)
 {
-	if (!s && form->has_precision && !form->precision && form->pad_char == '0')
-		form->pad_char = ' ';
-	if (form->padding > 0)
+	if (!s && form->hpr && !form->prc && form->pch)
+		form->pch = ' ';
+	if (form->pad > 0)
 		ft_padding(form);
 	ft_putstr_fd(s, 1);
-	if (form->padding < 0)
+	if (form->pad < 0)
 		ft_padding(form);
 	free(s);
 }

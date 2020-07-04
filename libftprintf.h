@@ -33,16 +33,16 @@
 
 typedef struct	s_prtform
 {
-	int		padding;
-	int		precision;
+	int		pad;
+	int		prc;
 	int		siz;
 	int		neg;
-	int		ch_form_str;
-	char	pad_char;
-	char	ch_type;
-	int		chars_in_string;
-	int		has_precision;
-	int		negative_int;
+	int		chf;
+	char	pch;
+	char	typ;
+	int		cis;
+	int		hpr;
+	int		ngi;
 }				t_prtform;
 int				ft_printf(const char *str, ...);
 t_prtform		*ft_fp_precision(t_prtform *form, char *str, va_list lst);

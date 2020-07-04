@@ -32,8 +32,8 @@ int		ft_isvalid(t_prtform *form, char *str)
 {
 	if (*ft_strchr("%csiduxpXn", *str) == *str && *str != '\0')
 	{
-		if (*str == 's' && form->has_precision && form->precision < 0)
-			form->has_precision = 0;
+		if (*str == 's' && form->hpr && form->prc < 0)
+			form->hpr = 0;
 		return (1);
 	}
 	else
@@ -42,13 +42,13 @@ int		ft_isvalid(t_prtform *form, char *str)
 
 void	ft_padtest(t_prtform *form)
 {
-	if (*ft_strchr("cp", form->ch_type) == form->ch_type)
-		form->pad_char = ' ';
+	if (*ft_strchr("cp", form->typ) == form->typ)
+		form->pch = ' ';
 }
 
 int		ft_testprcpad(t_prtform *form, int num)
 {
-	if (form->has_precision && !form->precision && !num)
+	if (form->hpr && !form->prc && !num)
 		return (1);
 	return (0);
 }

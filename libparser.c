@@ -17,25 +17,25 @@ t_prtform	*ft_fp_precision(t_prtform *form, char *str, va_list lst)
 	if (*str == '.')
 	{
 		str++;
-		form->has_precision = 1;
-		form->ch_form_str += 1;
+		form->hpr = 1;
+		form->chf += 1;
 		if (ft_isdigit(*str))
 		{
-			form->precision = ft_atoi((char *)str);
+			form->prc = ft_atoi((char *)str);
 			while(ft_isdigit(*str)) {
 				str++;
-				form->ch_form_str++;
+				form->chf++;
 			}
 		} else if (*str == '*') {
-			form->precision = va_arg(lst, int);
+			form->prc = va_arg(lst, int);
 			str++;
-			form->ch_form_str++;
+			form->chf++;
 		}
 	}
 	if (ft_isvalid(form, str))
 	{
-		form->ch_type = *str++;
-		form->ch_form_str++;
+		form->typ = *str++;
+		form->chf++;
 	}
 	return (form);
 }
@@ -46,19 +46,19 @@ t_prtform	*ft_fp_width(t_prtform *form, char *str, va_list lst)
 	{
 		if (ft_isdigit(*str))
 		{
-			form->padding = ft_atoi((char *)str);
+			form->pad = ft_atoi((char *)str);
 			while(ft_isdigit(*str)) {
 				str++;
-				form->ch_form_str++;
+				form->chf++;
 			}
 		} else if (*str == '*') {
-			form->padding = va_arg(lst, int);
-			form->neg = form->padding < 0 ? 1 : form->neg;
+			form->pad = va_arg(lst, int);
+			form->neg = form->pad < 0 ? 1 : form->neg;
 			str++;
-			form->ch_form_str++;
+			form->chf++;
 		}
 	}
-	form->padding *= (form->neg && form->padding > 0) ? -1 : 1;
+	form->pad *= (form->neg && form->pad > 0) ? -1 : 1;
 	return (ft_fp_precision(form, str, lst));
 }
 
@@ -70,11 +70,11 @@ t_prtform	*ft_fp_flag(t_prtform *form, char *str, va_list lst)
 		if (*str == '-')
 			form->neg = *str == '-' ? 1 : 0;
 		if (*str == '0')
-			form->pad_char = *str == '0' ? '0' : ' ';
+			form->pch = *str == '0' ? '0' : ' ';
 		str++;
-		form->ch_form_str++;
+		form->chf++;
 	}
-	form->pad_char = form->neg ? ' ' : form->pad_char;
+	form->pch = form->neg ? ' ' : form->pch;
 	return (ft_fp_width(form, str, lst));
 }
 

@@ -17,10 +17,10 @@ char	*ft_precisionchar(char *s, t_prtform *form)
 	char *tmp;
 
 	tmp = s;
-	form->chars_in_string = ft_strlen(s);
-	if (form->precision >= form->chars_in_string)
+	form->cis = ft_strlen(s);
+	if (form->prc >= form->cis)
 		return (s);
-	s = ft_substr(s, 0, form->precision);
+	s = ft_substr(s, 0, form->prc);
 	free(tmp);
 	return (s);
 }
@@ -31,13 +31,13 @@ char	*ft_precisionint(char *s, t_prtform *form)
 	char	*temp;
 	char	*temp2;
 
-	form->chars_in_string = ft_strlen(s);
-	if (form->precision == 0 && form->negative_int == 0)
+	form->cis = ft_strlen(s);
+	if (form->prc == 0 && form->ngi == 0)
 	{
 		free(s);
 		return (NULL);
 	}
-	aux = (form->precision > form->chars_in_string) ? form->precision - form->chars_in_string : 0;
+	aux = (form->prc > form->cis) ? form->prc - form->cis : 0;
 	if (aux == 0)
 		return (s);
 	temp = (char *)malloc(sizeof(char) * (aux + 1));
@@ -52,19 +52,19 @@ char	*ft_precisionint(char *s, t_prtform *form)
 
 int		ft_padding(t_prtform *form)
 {
-	if (form->padding < 0)
-		form->pad_char = ' ';
-	form->padding *= (form->padding < 0) ? -1 : 1;
-	if (form->siz >= form->padding)
+	if (form->pad < 0)
+		form->pch = ' ';
+	form->pad *= (form->pad < 0) ? -1 : 1;
+	if (form->siz >= form->pad)
 		return (0);
-	if (form->precision == 0 && form->has_precision)
-		form->pad_char = ' ';
-	while (form->siz < form->padding)
+	if (form->prc == 0 && form->hpr)
+		form->pch = ' ';
+	while (form->siz < form->pad)
 	{
-		if ((form->precision < form->padding) && form->precision > 0 && form->has_precision)
+		if ((form->prc < form->pad) && form->prc > 0 && form->hpr)
 			ft_putchar_fd(' ', 1);
 		else
-			ft_putchar_fd(form->pad_char, 1);
+			ft_putchar_fd(form->pch, 1);
 		form->siz++;
 	}
 	return (1);
@@ -77,8 +77,8 @@ char	*ft_negint(t_prtform *form, int i, char *s)
 	size_t	p;
 
 	c = ft_strlen(s) + 1;
-	p = form->padding;
-	if (c < p && i < 0 && form->pad_char == '0' && form->padding > 0 && form->precision < 0)
+	p = form->pad;
+	if (c < p && i < 0 && form->pch == '0' && form->pad > 0 && form->prc < 0)
 	{
 		while (c < p)
 		{
@@ -88,7 +88,7 @@ char	*ft_negint(t_prtform *form, int i, char *s)
 			c++;
 		}
 	}
-	if (i < 0 && (form->pad_char == ' ' || (form->has_precision && form->precision < form->padding)))
+	if (i < 0 && (form->pch == ' ' || (form->hpr && form->prc < form->pad)))
 	{
 		temp = ft_strjoin("-", s);
 		free(s);

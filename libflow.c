@@ -18,49 +18,49 @@ int		ft_vprintf(t_prtform *form, va_list lst, int count)
 	int				argint;
 	unsigned int	argllint;
 
-	if (form->ch_type == '%')
+	if (form->typ == '%')
 		form->siz = ft_pchr('%', form);
-	if (ft_testint(form->ch_type))
+	if (ft_testint(form->typ))
 	{
 		argint = va_arg(lst, int);
 		form->siz = ft_redint(argint, form);
 	}
-	if (ft_testllint(form->ch_type))
+	if (ft_testllint(form->typ))
 	{
 		argllint = va_arg(lst, unsigned int);
 		form->siz = ft_redllint(argllint, form);
 	}
-	if (form->ch_type == 's')
+	if (form->typ == 's')
 	{
 		strarg = ft_strdup(va_arg(lst, char *));
 		form->siz = ft_pstr(strarg, form);
 	}
-	if (form->ch_type == 'n')
+	if (form->typ == 'n')
 		ft_pn(count, va_arg(lst, int*));
-	form->padding *= (form->padding < 0) ? -1 : 1;
+	form->pad *= (form->pad < 0) ? -1 : 1;
 	return (form->siz);
 }
 
 int		ft_redint(int n, t_prtform *form)
 {
-	if (form->ch_type == 'd' || form->ch_type == 'i')
+	if (form->typ == 'd' || form->typ == 'i')
 		form->siz = ft_pint(n, form);
-	if (form->ch_type == 'c')
+	if (form->typ == 'c')
 		form->siz = ft_pchr(n, form);
-	if (form->ch_type == '%')
+	if (form->typ == '%')
 		form->siz = ft_pchr('%', form);
 	return (form->siz);
 }
 
 int		ft_redllint(unsigned int n, t_prtform *form)
 {
-	if (form->ch_type == 'u')
+	if (form->typ == 'u')
 		form->siz = ft_puin(n, form);
-	if (form->ch_type == 'x')
+	if (form->typ == 'x')
 		form->siz = ft_phex(n, form, 0);
-	if (form->ch_type == 'X')
+	if (form->typ == 'X')
 		form->siz = ft_phex(n, form, 1);
-	if (form->ch_type == 'p')
+	if (form->typ == 'p')
 		form->siz = ft_phex(n, form, 2);
 	return (form->siz);
 }

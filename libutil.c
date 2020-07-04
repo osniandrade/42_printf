@@ -14,17 +14,17 @@
 
 t_prtform	*ft_initform(t_prtform *form)
 {
-	form->padding = 0;
-	form->precision = 0;
+	form->pad = 0;
+	form->prc = 0;
 	form->siz = 0;
 	form->neg = 0;
-	form->ch_form_str = 0;
-	form->pad_char = ' ';
-	form->ch_type = ' ';
+	form->chf = 0;
+	form->pch = ' ';
+	form->typ = ' ';
 	form->siz = 0;
-	form->chars_in_string = 0;
-	form->has_precision = 0;
-	form->negative_int = 0;
+	form->cis = 0;
+	form->hpr = 0;
+	form->ngi = 0;
 	return (form);
 }
 

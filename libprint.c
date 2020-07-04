@@ -15,10 +15,10 @@
 int		ft_pchr(char c, t_prtform *form)
 {
 	form->siz = 1;
-	if (form->padding > 0)
+	if (form->pad > 0)
 		ft_padding(form);
 	ft_putchar_fd(c, 1);
-	if (form->padding < 0)
+	if (form->pad < 0)
 		ft_padding(form);
 	return (1);
 }
@@ -28,14 +28,14 @@ int		ft_phex(unsigned int i, t_prtform *form, int swt)
 	char	*s;
 	char	*temp;
 
-	form->negative_int = i;
+	form->ngi = i;
 	s = ft_itoabase(i, 16);
-	if (form->has_precision)
+	if (form->hpr)
 		s = ft_precisionint(s, form);
 	form->siz = ft_strlen(s);
 	if (swt == 1)
 		ft_uppercase(s);
-	if (!i && !form->precision && form->has_precision)
+	if (!i && !form->prc && form->hpr)
 	{
 		free(s);
 		s = NULL;
@@ -57,19 +57,19 @@ int		ft_pint(long i, t_prtform *form)
 	long	num;
 
 	num = (i < 0) ? i * -1 : i;
-	form->negative_int = 1;
+	form->ngi = 1;
 	s = (ft_testprcpad(form, num)) ? ft_strdup("") : ft_itoabase(num, 10);
-	if (form->has_precision)
+	if (form->hpr)
 		s = ft_precisionint(s, form);
 	s = ft_negint(form, i, s);
 	form->siz = ft_strlen(s);
-	if (i < 0 && form->pad_char == '0' && !(form->has_precision && form->precision < form->padding))
+	if (i < 0 && form->pch == '0' && !(form->hpr && form->prc < form->pad))
 	{
 		ft_putchar_fd('-', 1);
 		form->siz++;
 	}
 	//imprime espaço se numero, caracter de padding e precision forem 0
-	if (i == 0 && form->padding == 1 && form->has_precision && form->precision == 0)
+	if (i == 0 && form->pad == 1 && form->hpr && form->prc == 0)
 	{
 		ft_putchar_fd(' ', 1);
 		form->siz++;
@@ -85,7 +85,7 @@ int		ft_pstr(char *s, t_prtform *form)
 	{
 		s = ft_strdup("(null)");
 	}
-	if (form->has_precision)
+	if (form->hpr)
 		s = ft_precisionchar(s, form);
 	form->siz = ft_strlen(s);
 	ft_printpad(form, s);
@@ -96,12 +96,12 @@ int		ft_puin(unsigned int i, t_prtform *form)
 {
 	char	*s;
 
-	form->negative_int = i;
+	form->ngi = i;
 	s = ft_itoabase(i, 10);
-	if (form->has_precision)
+	if (form->hpr)
 		s = ft_precisionint(s, form);
 	form->siz = ft_strlen(s);
-	if (!i && !form->precision && form->has_precision)
+	if (!i && !form->prc && form->hpr)
 	{
 		free(s);
 		s = NULL;

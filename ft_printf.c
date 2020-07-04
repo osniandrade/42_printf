@@ -24,12 +24,12 @@ int		ft_doprintf(const char *str, va_list lst)
 		{
 			str++;
 			ft_formparser(&form, str, lst);
-			if (form.ch_form_str == 0)
+			if (form.chf == 0)
 				return (0);
 			ft_padtest(&form);
-			str += form.ch_form_str;
+			str += form.chf;
 			ft_vprintf(&form, lst, count);
-			count += (form.padding > form.siz) ? form.padding : form.siz;
+			count += (form.pad > form.siz) ? form.pad : form.siz;
 		}
 		else
 		{
