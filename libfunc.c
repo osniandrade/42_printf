@@ -12,7 +12,7 @@
 
 #include "libftprintf.h"
 
-void    ft_printpad(t_prtform *form, char *s)
+void	ft_printpad(t_prtform *form, char *s)
 {
 	if (!s && form->hpr && !form->prc && form->pch)
 		form->pch = ' ';
