@@ -72,7 +72,7 @@ char			*ft_precisionchar(char *s, t_prtform *form);
 char			*ft_precisionint(char *s, t_prtform *form);
 int				ft_padding(t_prtform *form);
 char			*ft_negint(t_prtform *form, int i, char *s);
-void    		ft_printpad(t_prtform *form, char *s);
+void			ft_printpad(t_prtform *form, char *s);
 int				ft_isalpha(int c);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strjoin(char const *s1, char const *s2);

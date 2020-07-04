@@ -68,13 +68,11 @@ int		ft_pint(long i, t_prtform *form)
 		ft_putchar_fd('-', 1);
 		form->siz++;
 	}
-	//imprime espaço se numero, caracter de padding e precision forem 0
 	if (i == 0 && form->pad == 1 && form->hpr && form->prc == 0)
 	{
 		ft_putchar_fd(' ', 1);
 		form->siz++;
 	}
-	//fim da alteração
 	ft_printpad(form, s);
 	return (form->siz);
 }

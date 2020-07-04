@@ -22,11 +22,14 @@ t_prtform	*ft_fp_precision(t_prtform *form, char *str, va_list lst)
 		if (ft_isdigit(*str))
 		{
 			form->prc = ft_atoi((char *)str);
-			while(ft_isdigit(*str)) {
+			while (ft_isdigit(*str)) 
+			{
 				str++;
 				form->chf++;
 			}
-		} else if (*str == '*') {
+		} 
+		else if (*str == '*') 
+		{
 			form->prc = va_arg(lst, int);
 			str++;
 			form->chf++;
@@ -47,11 +50,14 @@ t_prtform	*ft_fp_width(t_prtform *form, char *str, va_list lst)
 		if (ft_isdigit(*str))
 		{
 			form->pad = ft_atoi((char *)str);
-			while(ft_isdigit(*str)) {
+			while (ft_isdigit(*str)) 
+			{
 				str++;
 				form->chf++;
 			}
-		} else if (*str == '*') {
+		} 
+		else if (*str == '*') 
+		{
 			form->pad = va_arg(lst, int);
 			form->neg = form->pad < 0 ? 1 : form->neg;
 			str++;
@@ -66,7 +72,6 @@ t_prtform	*ft_fp_flag(t_prtform *form, char *str, va_list lst)
 {
 	while (*str == '-' || *str == '0')
 	{
-
 		if (*str == '-')
 			form->neg = *str == '-' ? 1 : 0;
 		if (*str == '0')
