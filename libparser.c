@@ -24,14 +24,13 @@ t_prtform	*ft_fp_precision(t_prtform *form, char *str, va_list lst)
 			form->prc = ft_atoi((char *)str);
 			while (ft_isdigit(*str) && str++)
 				form->chf++;
-		} 
-		else 
-			if (*str == '*')
-			{
-				form->prc = va_arg(lst, int);
-				str++;
-				form->chf++;
-			}
+		}
+		else if (*str == '*')
+		{
+			form->prc = va_arg(lst, int);
+			str++;
+			form->chf++;
+		}
 	}
 	if (ft_isvalid(form, str))
 	{
@@ -53,15 +52,14 @@ t_prtform	*ft_fp_width(t_prtform *form, char *str, va_list lst)
 				str++;
 				form->chf++;
 			}
-		} 
-		else 
-			if (*str == '*')
-			{
-				form->pad = va_arg(lst, int);
-				form->neg = form->pad < 0 ? 1 : form->neg;
-				str++;
-				form->chf++;
-			}
+		}
+		else if (*str == '*')
+		{
+			form->pad = va_arg(lst, int);
+			form->neg = form->pad < 0 ? 1 : form->neg;
+			str++;
+			form->chf++;
+		}
 	}
 	form->pad *= (form->neg && form->pad > 0) ? -1 : 1;
 	return (ft_fp_precision(form, str, lst));
