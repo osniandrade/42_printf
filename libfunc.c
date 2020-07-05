@@ -23,3 +23,13 @@ void	ft_printpad(t_prtform *form, char *s)
 		ft_padding(form);
 	free(s);
 }
+
+void	ft_precisioncheck(t_prtform *form, char *str)
+{
+	form->prc = ft_atoi((char *)str);
+	while (ft_isdigit(*str))
+	{
+		str++;
+		form->chf++;
+	}
+}
