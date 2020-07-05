@@ -20,7 +20,11 @@ t_prtform	*ft_fp_precision(t_prtform *form, char *str, va_list lst)
 		form->hpr = 1;
 		form->chf += 1;
 		if (ft_isdigit(*str))
-			ft_precisioncheck(form, str);
+		{
+			form->prc = ft_atoi((char *)str);
+			while (ft_isdigit(*str++))
+				form->chf++;
+		} 
 		else 
 			if (*str == '*')
 			{
