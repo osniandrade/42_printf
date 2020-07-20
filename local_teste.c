@@ -3,7 +3,12 @@
 
 int		main(void)
 {
-	ft_printf("<%0*.*d>", 4, -2, -12);
+	char *var = "5";
+	
+	ft_printf("<%p>", var);
 	ft_printf("\n");
+	printf("<%p>", var);
+	printf("\n");
+	
 	return (0);
 }
