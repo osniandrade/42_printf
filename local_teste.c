@@ -31,18 +31,14 @@ char	*itoa(unsigned long int n, char type)
 
 int		main(void)
 {
-	char *var = "5";
-	
-	ft_printf("<%p>\n", var);
-	printf("<%p>\n", var);
-
 	int 	a = 1431679840;
-    //char 	buffer[30];
+	char	*var = "5";
 	char	*result;
-
-    result = itoa(a,'x');
+	
+	printf("<%p>\n", var);
+	ft_printf("<%p>\n", var);
+	result = itoa(a,'x');
     printf("itoa = %s\n", result);
-
     result = ft_itoabase(a, 16);
 	printf("itoabase = %s\n", result);
 
