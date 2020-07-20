@@ -2,29 +2,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-	char* itoa(int value, char* result, int base) {
-		// check that the base if valid
-		if (base < 2 || base > 36) { *result = '\0'; return result; }
+int		digitcounter(unsigned long int n)
+{
+	if (!(n / 16))
+		return (1);
+	else
+		return (digitcounter(n / 16) + 1);
+}
 
-		char* ptr = result, *ptr1 = result, tmp_char;
-		int tmp_value;
+char	*itoa(unsigned long int n, char type)
+{
+	char	*hexnumber;
+	int		len;
+	char	*base;
 
-		do {
-			tmp_value = value;
-			value /= base;
-			*ptr++ = "zyxwvutsrqponmlkjihgfedcba9876543210123456789abcdefghijklmnopqrstuvwxyz" [35 + (tmp_value - value * base)];
-		} while ( value );
-
-		// Apply negative sign
-		if (tmp_value < 0) *ptr++ = '-';
-		*ptr-- = '\0';
-		while(ptr1 < ptr) {
-			tmp_char = *ptr;
-			*ptr--= *ptr1;
-			*ptr1++ = tmp_char;
-		}
-		return result;
+	base = type == 'x' ? "0123456789abcdef" : "0123456789ABCDEF";
+	len = digitcounter(n);
+	if (!(hexnumber = malloc((len + 1) * sizeof(*hexnumber))))
+		return (NULL);
+	hexnumber[len] = '\0';
+	while (len--)
+	{
+		hexnumber[len] = base[n % 16];
+		n /= 16;
 	}
+	return (hexnumber);
+}
 
 int		main(void)
 {
@@ -34,11 +37,11 @@ int		main(void)
 	printf("<%p>\n", var);
 
 	int 	a = 1431679840;
-    char 	buffer[30];
+    //char 	buffer[30];
 	char	*result;
 
-    itoa(a,buffer,16);   // here 16 means Hexadecimal
-    printf("itoa = %s\n", buffer);
+    result = itoa(a,'x');
+    printf("itoa = %s\n", result);
 
     result = ft_itoabase(a, 16);
 	printf("itoabase = %s\n", result);
