@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:37:55 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/06/30 16:46:37 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/20 09:21:32 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_prtform	*ft_initform(t_prtform *form)
 	return (form);
 }
 
-int			ft_countdig(long long int n, int b)
+int			ft_countdig(unsigned long int n, int b)
 {
 	int	i;
 
@@ -56,7 +56,7 @@ void		ft_revstr(char *s, int size)
 	}
 }
 
-char		*ft_itoabase(unsigned int n, int b)
+char		*ft_itoabase(unsigned long int n, int b)
 {
 	int		i;
 	int		r;

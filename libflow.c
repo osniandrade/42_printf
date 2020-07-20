@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:42:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/01 19:19:00 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/20 09:19:12 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		ft_redint(int n, t_prtform *form)
 	return (form->siz);
 }
 
-int		ft_redllint(unsigned int n, t_prtform *form)
+int		ft_redllint(unsigned long int n, t_prtform *form)
 {
 	if (form->typ == 'u')
 		form->siz = ft_puin(n, form);
