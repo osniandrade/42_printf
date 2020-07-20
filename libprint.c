@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:45:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/20 20:36:29 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/20 20:43:47 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		ft_phex(unsigned long int i, t_prtform *form, int swt)
 	}
 	if (swt == 2)
 	{
-		temp = ft_strjoin("0x10", s);
+		temp = ft_strjoin("0x", s);
 		free(s);
 		s = temp;
 		form->siz += 2;
