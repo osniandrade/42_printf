@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 19:59:09 by msales-a          #+#    #+#             */
-/*   Updated: 2020/07/20 21:44:24 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/20 21:55:28 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ t_prtform		*ft_fp_width(t_prtform *form, char *str, va_list lst);
 t_prtform		*ft_fp_flag(t_prtform *form, char *str, va_list lst);
 t_prtform		*ft_formparser(t_prtform *form, char const *str, va_list lst);
 int				ft_pchr(char c, t_prtform *form);
-int				ft_phex(long int i, t_prtform *form, int swt);
+int				ft_phex(unsigned long int i, t_prtform *form, int swt);
 int				ft_pint(long i, t_prtform *form);
 int				ft_pstr(char *s, t_prtform *form);
 int				ft_puin(unsigned int i, t_prtform *form);
@@ -60,13 +60,13 @@ int				ft_isvalid(t_prtform *form, char *str);
 int				ft_testprcpad(t_prtform *form, int num);
 void			ft_padtest(t_prtform *form);
 t_prtform		*ft_initform(t_prtform *form);
-int				ft_countdig(long int n, int b);
+int				ft_countdig(unsigned long int n, int b);
 void			ft_revstr(char *s, int size);
-char			*ft_itoabase(long int n, int b);
+char			*ft_itoabase(unsigned long int n, int b);
 void			ft_uppercase(char *s);
 int				ft_vprintf(t_prtform *form, va_list lst, int count);
 int				ft_redint(int n, t_prtform *form);
-int				ft_redllint(long int n, t_prtform *form);
+int				ft_redllint(unsigned long int n, t_prtform *form);
 void			ft_pn(int length, int *ptr);
 char			*ft_precisionchar(char *s, t_prtform *form);
 char			*ft_precisionint(char *s, t_prtform *form);
