@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:42:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/20 21:39:30 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/20 21:45:26 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_vprintf(t_prtform *form, va_list lst, int count)
 {
-	char				*strarg;
-	int					argint;
-	long long int	argllint;
+	char		*strarg;
+	int			argint;
+	long int	argllint;
 
 	if (form->typ == '%')
 		form->siz = ft_pchr('%', form);
@@ -27,7 +27,7 @@ int		ft_vprintf(t_prtform *form, va_list lst, int count)
 	}
 	if (ft_testllint(form->typ))
 	{
-		argllint = va_arg(lst, long long int);
+		argllint = va_arg(lst, long int);
 		form->siz = ft_redllint(argllint, form);
 	}
 	if (form->typ == 's')
@@ -52,7 +52,7 @@ int		ft_redint(int n, t_prtform *form)
 	return (form->siz);
 }
 
-int		ft_redllint(long long int n, t_prtform *form)
+int		ft_redllint(long int n, t_prtform *form)
 {
 	if (form->typ == 'u')
 		form->siz = ft_puin(n, form);
