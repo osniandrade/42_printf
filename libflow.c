@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:42:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/21 16:04:13 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/21 16:25:39 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_vprintf(t_prtform *form, va_list lst, int count)
 {
 	char			*strarg;
 	int				argint;
-	unsigned long int	argllint; //***********************mudar aqui
+	unsigned long long int	argllint; //***********************mudar aqui
 
 	if (form->typ == '%')
 		form->siz = ft_pchr('%', form);
@@ -27,7 +27,7 @@ int		ft_vprintf(t_prtform *form, va_list lst, int count)
 	}
 	if (ft_testllint(form->typ))
 	{
-		argllint = va_arg(lst, unsigned long int); //*********mudar aqui
+		argllint = va_arg(lst, unsigned long long int); //*********mudar aqui
 		form->siz = ft_redllint(argllint, form);
 	}
 	if (form->typ == 's')
@@ -52,7 +52,7 @@ int		ft_redint(int n, t_prtform *form)
 	return (form->siz);
 }
 
-int		ft_redllint(unsigned long int n, t_prtform *form) //***mudar aqui
+int		ft_redllint(unsigned long long int n, t_prtform *form) //***mudar aqui
 {
 	if (form->typ == 'u')
 		form->siz = ft_puin(n, form);

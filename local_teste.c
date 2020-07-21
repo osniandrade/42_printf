@@ -31,23 +31,23 @@ char	*itoa(unsigned long int n, char type)
 
 int		main(void)
 {
-	int     a = -4;
+// 	int     a = -4;
 	
-	ft_printf("%*p, %*x, %*p, %*x, %*p, %*x, %*p, %*x\n", a, (void *)209590960, a, 209590960, a, (void *)207038912, a, 207038912, a, (void *)1
-, a, 1, a, NULL, a, 0);
-	printf("%*p, %*x, %*p, %*x, %*p, %*x, %*p, %*x\n", a, (void *)209590960, a, 209590960, a, (void *)207038912, a, 207038912, a, (void *)1
-, a, 1, a, NULL, a, 0);
+// 	ft_printf("%*p, %*x, %*p, %*x, %*p, %*x, %*p, %*x\n", a, (void *)209590960, a, 209590960, a, (void *)207038912, a, 207038912, a, (void *)1
+// , a, 1, a, NULL, a, 0);
+// 	printf("%*p, %*x, %*p, %*x, %*p, %*x, %*p, %*x\n", a, (void *)209590960, a, 209590960, a, (void *)207038912, a, 207038912, a, (void *)1
+// , a, 1, a, NULL, a, 0);
 	
-	// int 	a = 1431679840;
-	// char	*var = "5";
-	// char	*result;
+	unsigned long long int 	a = 93940956356327;
+	char	*var = "5";
+	char	*result;
 	
-	// printf("<%p>\n", var);
-	// ft_printf("<%p>\n", var);
-	// result = itoa(a,'x');
-    // printf("itoa = %s\n", result);
-    // result = ft_itoabase(a, 16);
-	// printf("itoabase = %s\n", result);
+	//printf("<%p %x %X>\n", var, a, a);
+	ft_printf("<%p %x %X>\n", var, a, a);
+	result = itoa(a,'x');
+    printf("itoa = %s\n", result);
+    result = ft_itoabase(a, 16);
+	printf("itoabase = %s\n", result);
 
 	return (0);
 }
