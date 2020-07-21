@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:45:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/21 13:53:02 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/21 16:06:55 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int		ft_pstr(char *s, t_prtform *form)
 	return (form->siz);
 }
 
-int		ft_puin(unsigned int i, t_prtform *form)
+int		ft_puin(unsigned long int i, t_prtform *form) //***mudar aqui
 {
 	char	*s;
 
