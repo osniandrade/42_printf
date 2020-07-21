@@ -31,6 +31,13 @@ char	*itoa(unsigned long int n, char type)
 
 int		main(void)
 {
+// 	int     a = -4;
+	
+// 	ft_printf("%*p, %*x, %*p, %*x, %*p, %*x, %*p, %*x\n", a, (void *)209590960, a, 209590960, a, (void *)207038912, a, 207038912, a, (void *)1
+// , a, 1, a, NULL, a, 0);
+// 	printf("%*p, %*x, %*p, %*x, %*p, %*x, %*p, %*x\n", a, (void *)209590960, a, 209590960, a, (void *)207038912, a, 207038912, a, (void *)1
+// , a, 1, a, NULL, a, 0);
+	
 	int 	a = 1431679840;
 	char	*var = "5";
 	char	*result;
