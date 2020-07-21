@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:45:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/20 20:52:13 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/20 21:17:51 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_pchr(char c, t_prtform *form)
 	return (1);
 }
 
-int		ft_phex(unsigned long long int i, t_prtform *form, int swt)
+int		ft_phex(unsigned long int i, t_prtform *form, int swt)
 {
 	char	*s;
 	char	*temp;
@@ -42,7 +42,7 @@ int		ft_phex(unsigned long long int i, t_prtform *form, int swt)
 	}
 	if (swt == 2)
 	{
-		temp = ft_strjoin("0x", s);
+		temp = (form->siz < 9) ? ft_strjoin("0x10", s) : ft_strjoin("0x", s);
 		free(s);
 		s = temp;
 		form->siz += 2;
