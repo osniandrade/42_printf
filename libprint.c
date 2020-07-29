@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:45:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/21 16:26:20 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/29 16:26:09 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int		ft_pchr(char c, t_prtform *form)
 	return (1);
 }
 
-int		ft_phex(unsigned long long int i, t_prtform *form, int swt) //***mudar aqui
+int		ft_phex(unsigned long long int i, t_prtform *form, int swt)
+//int		ft_phex(unsigned int i, t_prtform *form, int swt)
 {
 	char	*s;
 	char	*temp;

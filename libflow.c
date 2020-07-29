@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:42:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/21 16:57:47 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/29 16:28:25 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int		ft_vprintf(t_prtform *form, va_list lst, int count)
 	unsigned long long int	argllint;
 	//unsigned int	argllint;
 
+	argllint = 0;
 	if (form->typ == '%')
 		form->siz = ft_pchr('%', form);
 	if (ft_testint(form->typ))
