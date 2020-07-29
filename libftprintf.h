@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 19:59:09 by msales-a          #+#    #+#             */
-/*   Updated: 2020/07/21 16:56:12 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/29 16:14:56 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int				ft_puin(unsigned long long int i, t_prtform *form);
 //int				ft_puin(unsigned int i, t_prtform *form);
 int				ft_testint(char c);
 int				ft_testllint(char c);
+int				ft_testuint(char c);
 int				ft_isvalid(t_prtform *form, char *str);
 int				ft_testprcpad(t_prtform *form, int num);
 void			ft_padtest(t_prtform *form);
@@ -71,7 +72,7 @@ void			ft_uppercase(char *s);
 int				ft_vprintf(t_prtform *form, va_list lst, int count);
 int				ft_redint(int n, t_prtform *form);
 int				ft_redllint(unsigned long long int n, t_prtform *form);
-//int				ft_redllint(unsigned int n, t_prtform *form);
+int				ft_reduint(unsigned int n, t_prtform *form);
 void			ft_pn(int length, int *ptr);
 char			*ft_precisionchar(char *s, t_prtform *form);
 char			*ft_precisionint(char *s, t_prtform *form);
