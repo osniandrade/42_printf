@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:37:55 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 10:13:30 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 15:43:13 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,6 @@ t_prtform	*ft_initform(t_prtform *form)
 }
 
 int			ft_countdig(unsigned long long int n, int b)
-{
-	int	i;
-
-	i = (n <= 0) ? 1 : 0;
-	while (n != 0)
-	{
-		i++;
-		n /= b;
-	}
-	return (i);
-}
-
-int			ft_countdig_ui(unsigned int n, int b)
 {
 	int	i;
 
@@ -78,29 +65,6 @@ char		*ft_itoabase(unsigned long long int n, int b)
 
 	i = 0;
 	size = ft_countdig(n, b);
-	s = (char *)malloc(sizeof(char) * (size + 1));
-	if (n == 0)
-		s[i++] = '0';
-	while (n != 0)
-	{
-		r = n % b;
-		s[i++] = (r > 9) ? (r - 10) + 'a' : r + '0';
-		n /= b;
-	}
-	ft_revstr(s, size);
-	s[i] = '\0';
-	return (s);
-}
-
-char		*ft_itoabase_ui(unsigned int n, int b)
-{
-	int		i;
-	int		r;
-	int		size;
-	char	*s;
-
-	i = 0;
-	size = ft_countdig_ui(n, b);
 	s = (char *)malloc(sizeof(char) * (size + 1));
 	if (n == 0)
 		s[i++] = '0';

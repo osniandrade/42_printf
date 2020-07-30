@@ -53,8 +53,8 @@ int		main(void)
 	char    *t = "0x12345678";
 	char    *u = "-0";
 
-	ft_printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", i, j, k, l, m, n, c, c, j, j, j);
 	printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", i, j, k, l, m, n, c, c, j, j, j);
+	ft_printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X\n", i, j, k, l, m, n, c, c, j, j, j);
 	
 	// unsigned long long int 	a = 93940956356327;
 	// char	*var = "5";
