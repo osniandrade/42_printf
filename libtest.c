@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:49:50 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 15:55:24 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 16:22:51 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,31 @@ int		ft_testint(char c)
 		return (0);
 }
 
-int		ft_testuint(char c)
+int		ft_testinttype(char c)
 {
 	if (*ft_strchr("xX", c) == c)
 		return (1);
+	if (*ft_strchr("up", c) == c)
+		return (2);
 	else
 		return (0);
 }
 
-int		ft_testlint(char c)
-{
-	if (*ft_strchr("up", c) == c)
-		return (1);
-	else
-		return (0);
-}
+// int		ft_testuint(char c)
+// {
+// 	if (*ft_strchr("xX", c) == c)
+// 		return (1);
+// 	else
+// 		return (0);
+// }
+
+// int		ft_testlint(char c)
+// {
+// 	if (*ft_strchr("up", c) == c)
+// 		return (1);
+// 	else
+// 		return (0);
+// }
 
 int		ft_isvalid(t_prtform *form, char *str)
 {

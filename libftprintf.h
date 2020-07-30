@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 19:59:09 by msales-a          #+#    #+#             */
-/*   Updated: 2020/07/30 15:49:07 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 16:22:31 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int				ft_pint(long int i, t_prtform *form);
 int				ft_pstr(char *s, t_prtform *form);
 int				ft_puin(unsigned int i, t_prtform *form);
 int				ft_testint(char c);
+int				ft_testinttype(char c);
 int				ft_testlint(char c);
 int				ft_testuint(char c);
 int				ft_isvalid(t_prtform *form, char *str);
