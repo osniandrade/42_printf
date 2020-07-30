@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:45:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/29 16:17:33 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 10:15:26 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,34 @@ int		ft_phex(unsigned long long int i, t_prtform *form, int swt)
 
 	form->ngi = i;
 	s = ft_itoabase(i, 16);
+	if (form->hpr)
+		s = ft_precisionint(s, form);
+	form->siz = ft_strlen(s);
+	if (swt == 1)
+		ft_uppercase(s);
+	if (!i && !form->prc && form->hpr)
+	{
+		free(s);
+		s = NULL;
+	}
+	if (swt == 2)
+	{
+		temp = ft_strjoin("0x", s);
+		free(s);
+		s = temp;
+		form->siz += 2;
+	}
+	ft_printpad(form, s);
+	return (form->siz);
+}
+
+int		ft_phex_ui(unsigned int i, t_prtform *form, int swt)
+{
+	char	*s;
+	char	*temp;
+
+	form->ngi = i;
+	s = ft_itoabase_ui(i, 16);
 	if (form->hpr)
 		s = ft_precisionint(s, form);
 	form->siz = ft_strlen(s);
@@ -90,7 +118,7 @@ int		ft_pstr(char *s, t_prtform *form)
 	return (form->siz);
 }
 
-int		ft_puin(unsigned long long int i, t_prtform *form) //***mudar aqui
+int		ft_puin(unsigned int i, t_prtform *form)
 {
 	char	*s;
 

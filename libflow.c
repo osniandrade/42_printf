@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:42:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/29 16:39:43 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 10:16:35 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int		ft_vprintf(t_prtform *form, va_list lst, int count)
 	if (ft_testllint(form->typ))
 	{
 		argllint = va_arg(lst, unsigned long long int);
-		//argllint = va_arg(lst, unsigned int);
 		form->siz = ft_redllint(argllint, form);
 	}
 	if (form->typ == 's')
@@ -72,14 +71,8 @@ int		ft_redllint(unsigned long long int n, t_prtform *form)
 
 int		ft_reduint(unsigned int n, t_prtform *form)
 {
-	unsigned long long int	lln;
-
-	lln = 0;
 	if (form->typ == 'p')
-	{
-		lln = n;
-		form->siz = ft_phex(lln, form, 2);
-	}
+		form->siz = ft_phex_ui(n, form, 2);
 	return (form->siz);
 }
 
