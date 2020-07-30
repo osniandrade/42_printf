@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:42:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 10:01:13 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 10:06:20 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_vprintf(t_prtform *form, va_list lst, int count)
 {
 	char			*strarg;
 	int				argint;
-	unsigned int	argllint;
+	uint64_t		argllint;
 
 	argllint = 0;
 	if (form->typ == '%')
@@ -28,7 +28,7 @@ int		ft_vprintf(t_prtform *form, va_list lst, int count)
 	}
 	if (ft_testllint(form->typ))
 	{
-		argllint = va_arg(lst, unsigned int);
+		argllint = va_arg(lst, uint64_t);
 		form->siz = ft_redllint(argllint, form);
 	}
 	if (form->typ == 's')
