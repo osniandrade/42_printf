@@ -6,11 +6,19 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:45:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 16:28:37 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:12:19 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+/*
+** ft_pchr - prints a single character and its informed padding, if needed
+** ft_phex - prints hexadecimal values and its padding, if needed
+** ft_pint - prints int values and its padding, if needed
+** ft_pstr - prints strings and its padding, if needed
+** ft_puin - prints unsigned int values and its padding, if needed
+*/
 
 int		ft_pchr(char c, t_prtform *form)
 {

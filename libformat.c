@@ -6,11 +6,21 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:48:41 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/01 20:16:21 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:05:31 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+/*
+** ft_precisionchar - checks if precision value is less than
+**                    characters in string
+** ft_precisionint  - checks and prints the 0 padding for int 
+** 					  values
+** ft_padding       - checks and prints the padding character
+** ft_negint	    - adjusts the padding and prints the - sign
+** 					  on negative numbers
+*/
 
 char	*ft_precisionchar(char *s, t_prtform *form)
 {

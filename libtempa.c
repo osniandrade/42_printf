@@ -6,11 +6,19 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:32:03 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 16:31:53 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:24:43 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+/*
+** ft_isalpha - checks if value is a letter
+** ft_strlcat - concatenates a string into another
+** ft_strjoin - concatenates two strings, generating a third one
+** ft_strdup  - duplicates a string
+** ft_toupper - upcases a character
+*/
 
 int		ft_isalpha(int c)
 {

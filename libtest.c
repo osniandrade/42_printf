@@ -6,11 +6,18 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:49:50 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 16:24:38 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:22:25 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+/*
+** ft_testint     - tests if flag is for integer or single character
+** ft_testinttype - tests type of int: unsigned int or unsigned long int
+** ft_padtest     - changes the padding character, if needed
+** ft_testprcpad  - tests if value to be printed can have precision
+*/
 
 int		ft_testint(char c)
 {

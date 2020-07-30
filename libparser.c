@@ -6,11 +6,18 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:36:00 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/06/30 16:46:32 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:09:26 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+/*
+** ft_fp_precision - checks for precision value in the format string
+** ft_fp_width     - checks the size of the format string
+** ft_fp_flag      - checks for flags in the format string
+** ft_formparser   - entry point to define the format struct
+*/
 
 t_prtform	*ft_fp_precision(t_prtform *form, char *str, va_list lst)
 {

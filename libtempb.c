@@ -6,11 +6,20 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:32:03 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 16:30:52 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:17:39 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+/*
+** ft_substr     - reduces a string from a defined position
+** ft_strlen     - returns the size of a string
+** ft_strlcpy    - copies a string into another
+** ft_strchr     - checks for the presence of a character in a 
+**                 string
+** ft_putchar_fd - prints a single character
+*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

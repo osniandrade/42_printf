@@ -6,11 +6,17 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/19 09:55:12 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/06/30 16:46:33 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 16:55:02 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+/*
+** ft_printf   - entry point
+** ft_doprintf - sets the formatting structure and test for padding
+** 				 necessity
+*/
 
 int		ft_doprintf(const char *str, va_list lst)
 {

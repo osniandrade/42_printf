@@ -6,11 +6,18 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:32:03 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 16:31:06 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:19:12 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+/*
+** ft_putstr_fd - prints a string
+** ft_memcpy    - copies the content of a memory address to another
+** ft_isdigit   - checks if the value is a number
+** ft_atoi      - converts a number from character form to int 
+*/
 
 void	ft_putstr_fd(char *s, int fd)
 {
