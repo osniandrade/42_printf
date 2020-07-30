@@ -16,6 +16,7 @@ int		ft_vprintf(t_prtform *form, va_list lst, int count)
 {
 	char				*strarg;
 
+	argllint = 0;
 	if (form->typ == '%')
 		form->siz = ft_pchr('%', form);
 	if (ft_testint(form->typ))
