@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:49:50 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 15:44:41 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 15:55:24 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_testint(char c)
 
 int		ft_testuint(char c)
 {
-	if (*ft_strchr("p", c) == c)
+	if (*ft_strchr("xX", c) == c)
 		return (1);
 	else
 		return (0);
@@ -30,7 +30,7 @@ int		ft_testuint(char c)
 
 int		ft_testlint(char c)
 {
-	if (*ft_strchr("uxX", c) == c)
+	if (*ft_strchr("up", c) == c)
 		return (1);
 	else
 		return (0);

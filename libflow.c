@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:42:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 15:46:36 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 16:01:21 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,17 +62,17 @@ int		ft_redlint(unsigned long int n, t_prtform *form)
 {
 	if (form->typ == 'u')
 		form->siz = ft_puin(n, form);
-	if (form->typ == 'x')
-		form->siz = ft_phex(n, form, 0);
-	if (form->typ == 'X')
-		form->siz = ft_phex(n, form, 1);
+	if (form->typ == 'p')
+		form->siz = ft_phex(n, form, 2);
 	return (form->siz);
 }
 
 int		ft_reduint(unsigned int n, t_prtform *form)
 {
-	if (form->typ == 'p')
-		form->siz = ft_phex_ui(n, form, 2);
+	if (form->typ == 'x')
+		form->siz = ft_phex_ui(n, form, 0);
+	if (form->typ == 'X')
+		form->siz = ft_phex_ui(n, form, 1);
 	return (form->siz);
 }
 
