@@ -6,7 +6,7 @@
 #    By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/04 21:48:24 by msales-a          #+#    #+#              #
-#    Updated: 2020/07/20 21:29:56 by ocarlos-         ###   ########.fr        #
+#    Updated: 2020/07/30 16:31:22 by ocarlos-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ SOURCES = ft_printf.c \
 		libtest.c \
 		libutil.c \
 		libfunc.c \
-		libtemp.c
+		libtempa.c \
+		libtempb.c \
+		libtempc.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:49:50 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/01 19:47:27 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 16:24:38 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ int		ft_testint(char c)
 		return (0);
 }
 
-int		ft_testllint(char c)
+int		ft_testinttype(char c)
 {
-	if (*ft_strchr("uxXp", c) == c)
+	if (*ft_strchr("xX", c) == c)
 		return (1);
+	if (*ft_strchr("up", c) == c)
+		return (2);
 	else
 		return (0);
 }

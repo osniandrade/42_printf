@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:42:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/29 20:35:16 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 16:28:49 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,17 @@
 
 int		ft_vprintf(t_prtform *form, va_list lst, int count)
 {
-	char			*strarg;
-	int				argint;
-	unsigned int	argllint;
+	char				*strarg;
 
 	argllint = 0;
 	if (form->typ == '%')
 		form->siz = ft_pchr('%', form);
 	if (ft_testint(form->typ))
-	{
-		argint = va_arg(lst, int);
-		form->siz = ft_redint(argint, form);
-	}
-	if (ft_testllint(form->typ))
-	{
-		argllint = va_arg(lst, unsigned int);
-		form->siz = ft_redllint(argllint, form);
-	}
+		form->siz = ft_redint(va_arg(lst, int), form);
+	if (ft_testinttype(form->typ) == 1)
+		form->siz = ft_reduint(va_arg(lst, unsigned int), form);
+	if (ft_testinttype(form->typ) == 2)
+		form->siz = ft_redlint(va_arg(lst, unsigned long int), form);
 	if (form->typ == 's')
 	{
 		strarg = ft_strdup(va_arg(lst, char *));
@@ -53,16 +47,21 @@ int		ft_redint(int n, t_prtform *form)
 	return (form->siz);
 }
 
-int		ft_redllint(unsigned int n, t_prtform *form)
+int		ft_redlint(unsigned long int n, t_prtform *form)
 {
 	if (form->typ == 'u')
 		form->siz = ft_puin(n, form);
+	if (form->typ == 'p')
+		form->siz = ft_phex(n, form, 2);
+	return (form->siz);
+}
+
+int		ft_reduint(unsigned int n, t_prtform *form)
+{
 	if (form->typ == 'x')
 		form->siz = ft_phex(n, form, 0);
 	if (form->typ == 'X')
 		form->siz = ft_phex(n, form, 1);
-	if (form->typ == 'p')
-		form->siz = ft_phex(n, form, 2);
 	return (form->siz);
 }
 
