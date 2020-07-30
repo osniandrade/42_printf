@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:45:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/29 20:36:49 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 10:00:36 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_pchr(char c, t_prtform *form)
 	return (1);
 }
 
-int		ft_phex(unsigned int i, t_prtform *form, int swt)
+int		ft_phex(uint64_t i, t_prtform *form, int swt)
 {
 	char	*s;
 	char	*temp;
@@ -90,7 +90,7 @@ int		ft_pstr(char *s, t_prtform *form)
 	return (form->siz);
 }
 
-int		ft_puin(unsigned int i, t_prtform *form)
+int		ft_puin(uint64_t i, t_prtform *form)
 {
 	char	*s;
 
