@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:45:56 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 16:26:46 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 16:28:37 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,34 +50,6 @@ int		ft_phex(unsigned long int i, t_prtform *form, int swt)
 	ft_printpad(form, s);
 	return (form->siz);
 }
-
-// int		ft_phex_ui(unsigned int i, t_prtform *form, int swt)
-// {
-// 	char	*s;
-// 	char	*temp;
-
-// 	form->ngi = i;
-// 	s = ft_itoabase(i, 16);
-// 	if (form->hpr)
-// 		s = ft_precisionint(s, form);
-// 	form->siz = ft_strlen(s);
-// 	if (swt == 1)
-// 		ft_uppercase(s);
-// 	if (!i && !form->prc && form->hpr)
-// 	{
-// 		free(s);
-// 		s = NULL;
-// 	}
-// 	if (swt == 2)
-// 	{
-// 		temp = ft_strjoin("0x", s);
-// 		free(s);
-// 		s = temp;
-// 		form->siz += 2;
-// 	}
-// 	ft_printpad(form, s);
-// 	return (form->siz);
-// }
 
 int		ft_pint(long int i, t_prtform *form)
 {
