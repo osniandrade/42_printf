@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 19:59:09 by msales-a          #+#    #+#             */
-/*   Updated: 2020/07/30 16:22:31 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 16:27:13 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ t_prtform		*ft_fp_flag(t_prtform *form, char *str, va_list lst);
 t_prtform		*ft_formparser(t_prtform *form, char const *str, va_list lst);
 int				ft_pchr(char c, t_prtform *form);
 int				ft_phex(unsigned long int i, t_prtform *form, int swt);
-int				ft_phex_ui(unsigned int i, t_prtform *form, int swt);
+//int				ft_phex_ui(unsigned int i, t_prtform *form, int swt);
 int				ft_pint(long int i, t_prtform *form);
 int				ft_pstr(char *s, t_prtform *form);
 int				ft_puin(unsigned int i, t_prtform *form);
