@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:48:41 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 17:05:31 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:28:10 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 ** ft_precisionchar - checks if precision value is less than
 **                    characters in string
-** ft_precisionint  - checks and prints the 0 padding for int 
+** ft_precisionint  - checks and prints the 0 padding for int
 ** 					  values
 ** ft_padding       - checks and prints the padding character
 ** ft_negint	    - adjusts the padding and prints the - sign

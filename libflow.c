@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:42:14 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 16:55:09 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:28:42 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 /*
 ** ft_vprintf - receives the va_arg, tests for it's content and
 ** 			    directs to the right function
-** ft_redint  - directs the int value to right function (%d, %i, 
+** ft_redint  - directs the int value to right function (%d, %i,
 ** 			    %c or %)
-** ft_redlint - directs the unsigned long int 
+** ft_redlint - directs the unsigned long int
 **              value to the right function (%u or %p)
-** ft_reduint - directs the unsigned int value to the right 
+** ft_reduint - directs the unsigned int value to the right
 **              function (%x or %X)
 */
 

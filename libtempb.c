@@ -6,7 +6,7 @@
 /*   By: ocarlos- <ocarlos-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 21:32:03 by ocarlos-          #+#    #+#             */
-/*   Updated: 2020/07/30 17:17:39 by ocarlos-         ###   ########.fr       */
+/*   Updated: 2020/07/30 17:27:57 by ocarlos-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** ft_substr     - reduces a string from a defined position
 ** ft_strlen     - returns the size of a string
 ** ft_strlcpy    - copies a string into another
-** ft_strchr     - checks for the presence of a character in a 
+** ft_strchr     - checks for the presence of a character in a
 **                 string
 ** ft_putchar_fd - prints a single character
 */
